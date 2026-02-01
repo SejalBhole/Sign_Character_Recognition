@@ -39,12 +39,10 @@ SIGN-BRIDGE-VITE/
 │   │   └── Workspace.jsx      # Main Logic: Webcam & API Calls
 │   └── package.json           # Frontend Dependencies
 └── README.md                  # Project Documentation
+```
 
 
-### 6. Installation & Setup
-The step-by-step guide for running the code.
 
-```markdown
 ## 🚀 Installation & Setup Guide
 
 Follow these steps to get the project running locally.
@@ -92,8 +90,7 @@ The frontend displays the video and results.
     ```
     *Terminal will provide a local URL, typically: `http://localhost:5173`*
 
-
-    ## 🧠 Model Architecture (Deep Dive)
+## 🧠 Model Architecture (Deep Dive)
 
 ### Current Implementation: Spatial Recognition (CNN)
 The current model excels at identifying static hand shapes.
@@ -127,5 +124,5 @@ The codebase is structured to support the "Fusion" upgrade:
 
 ## 👨‍💻 Author
 
-**[Your Name]**
+**[Sejal Bhole]**
 *Full-Stack ML Enthusiast | Aspiring AI Engineer*
