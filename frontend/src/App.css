@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --navy: #022b3a;
+  --dark-bg: #0b121f; 
+  --teal: #1f7a8c;
+  --blue-accent: #137fec;
+  --lightblue: #bfdbf7;
+  --white: #ffffff;
+  --slate: #94a3b8;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lexend', sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* --- FIX 1: Navbar Alignment --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* This ensures vertical alignment */
+  padding: 1.5rem 4rem;
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Include padding in width calculation */
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center; /* Align links with button */
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--slate);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover { color: var(--white); }
+
+.btn-primary {
+  background-color: var(--blue-accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap; /* Prevent button text wrapping */
+}
+
+.btn-primary:hover {
+  background-color: #0f6bd1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(19, 127, 236, 0.3);
+}
+
+/* --- Hero Section --- */
+.hero {
+  padding: 8rem 4rem 4rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  min-height: 90vh;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.tagline {
+  color: var(--blue-accent);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.text-gradient {
+  color: var(--blue-accent);
+}
+
+.hero p {
+  color: var(--slate);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 500px;
+  margin-bottom: 2.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--slate);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hero-visual {
+  flex: 1;
+  position: relative;
+}
+
+.video-card {
+  background: #111;
+  border-radius: 1rem;
+  border: 1px solid #1e293b;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.video-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+/* --- Features --- */
+.features-section {
+  padding: 6rem 4rem;
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.feature-card {
+  background: #101822; /* Slightly lighter than bg */
+  border: 1px solid #1e293b;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--blue-accent);
+}
+
+.icon-box {
+  width: 50px;
+  height: 50px;
+  background: rgba(19, 127, 236, 0.1);
+  color: var(--blue-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+/* --- How it Works --- */
+/* --- How it Works Section --- */
+.steps-section {
+  padding: 6rem 4rem;
+  background-color: #0b121f; /* Matches body bg */
+  text-align: center;
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  position: relative;
+}
+
+/* The vertical line connecting the steps */
+.steps-container::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  bottom: 100px;
+  left: 30px; /* Aligns with center of icons */
+  width: 2px;
+  background: #1e293b;
+  z-index: 0;
+}
+
+.step {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1; /* Puts content above the line */
+}
+
+.step-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--blue-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 8px #0b121f; /* Creates the "gap" around the icon */
+}
+
+@media (max-width: 768px) {
+  .steps-section { padding: 4rem 1.5rem; }
+  .step { gap: 1rem; }
+  .steps-container::before { left: 30px; }
+}
+/* --- CTA --- */
+.cta-section {
+  padding: 6rem 4rem;
+}
+
+.cta-box {
+  background: var(--blue-accent);
+  border-radius: 2rem;
+  padding: 4rem;
+  text-align: center;
+  color: white;
+  background-image: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.2) 2px, transparent 2px);
+  background-size: 30px 30px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .hero { flex-direction: column; text-align: center; padding-top: 6rem; }
+  .hero-buttons { justify-content: center; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .navbar { padding: 1.5rem; }
+}
+
+.workspace-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed; /* Force it to cover everything */
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: 50;
+  overflow: hidden;
+}
